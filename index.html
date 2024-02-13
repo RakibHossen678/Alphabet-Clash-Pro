@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -7,9 +7,84 @@
     <title>Alpha Clash Pro</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
-<body>
+    <style>
+        .font-poppins {
+            font-family: "Poppins", sans-serif;
+        }
+        .font-anton {
+            font-family: "Anton", sans-serif;
+        }
+    </style>
+</head>
+<body class="font-poppins  ">
+    <main class="bg-[#010313] min-h-screen bg-center bg-no-repeat  bg-[url(assests/images/background.png)] ">
+
+        <!-- home screen -->
+
+        <section class="home min-h-screen flex  justify-center items-center hidden ">
+           <div class="text-center flex flex-col items-center  space-y-8">
+            <h1 class="font-anton  text-9xl text-[#FFFFFF]">ALPHABET CLASH</h1>
+            <p class="text-[#FFFFFF] text-xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+            <button class="bg-[#FFFFFF] text-[#010313] font-bold px-6 py-3 rounded-lg">Play Now</button>
+           </div>
+        </section>
+
+        <!-- Play ground -->
+
+        <section class="play-ground">
+          <div class="min-h-screen flex  justify-center items-center flex-col">
+                <div class="artboard artboard-horizontal phone-6 border-[14px] bg-gray-100 opacity-55 mx-auto rounded-xl border-[#2F2941cc]">1024×320</div>
+                <div></div>
+                <div class="mt-6">
+                    <div class="flex justify-center gap-1  w-full">
+                        <kbd class="kbd hover:bg-[#FFA500]">q</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">w</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">e</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">r</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">t</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">y</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">u</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">i</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">o</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">p</kbd>
+                      </div> 
+                      <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd hover:bg-[#FFA500]">a</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">s</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">d</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">f</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">g</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">h</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">j</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">k</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">l</kbd>
+                      </div> 
+                      <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd hover:bg-[#FFA500]">z</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">x</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">c</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">v</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">b</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">n</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">m</kbd>
+                        <kbd class="kbd hover:bg-[#FFA500]">/</kbd>
+                      </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  -->
+        <section class="score"></section>
+    </main>
 
 </body>
 
