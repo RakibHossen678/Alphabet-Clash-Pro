@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpha Clash Pro</title>
+    <link rel="shortcut icon" href="assests/images/alphaf.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,27 +27,27 @@
     </style>
 </head>
 <body class="font-poppins  ">
-    <main class="bg-[#010313] min-h-screen bg-center bg-no-repeat  bg-[url(assests/images/background.png)] ">
+    <main class="bg-[#010313] min-h-screen bg-center bg-no-repeat bg-[url(assests/images/background.png)] ">
 
         <!-- home screen -->
 
-        <section class="home min-h-screen flex  justify-center items-center hidden ">
+        <section id="home-screen" class=" min-h-screen flex  justify-center items-center  ">
            <div class="text-center flex flex-col items-center  space-y-8">
-            <h1 class="font-anton  text-9xl text-[#FFFFFF]">ALPHABET CLASH</h1>
+            <h1 class="font-anton text-5xl lg:text-9xl text-[#FFFFFF]">ALPHABET CLASH</h1>
             <p class="text-[#FFFFFF] text-xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-            <button class="bg-[#FFFFFF] text-[#010313] font-bold px-6 py-3 rounded-lg">Play Now</button>
+            <button onclick="play()" class="bg-[#FFFFFF] text-[#010313] font-bold px-6 py-3 rounded-lg hover:bg-[#010313] hover:text-white hover:shadow-xl">Play Now</button>
            </div>
         </section>
 
         <!-- Play ground -->
 
-        <section class="play-ground min-h-screen flex flex-col justify-center items-center hidden">
+        <section id="play-ground" class=" min-h-screen flex flex-col justify-center items-center hidden">
           <div class="">
                 <div class="artboard artboard-horizontal phone-6 border-[14px] bg-[#FFFFFFB3] mx-auto w-auto  rounded-xl border-[#2F2941cc] ">
                     <div class="bg-[#2F2941cc] w-96 mx-auto text-center rounded-b-xl text-white font-medium py-2 ">
                         <p>Don't watch keyboard  while playing...</p>
                     </div>
-                    <p class="text-8xl flex justify-center items-center h-full">Y</p>
+                    <p id="current-alphabet" class="text-8xl flex justify-center items-center h-full uppercase">Y</p>
                 </div>
                 <div class="mt-6  ">
                     <div class="flex justify-center gap-1 w-full  ">
@@ -100,8 +101,8 @@
             </div>
         </section>
 
-        <!--  -->
-        <section class="score flex justify-center text-center items-center min-h-screen ">
+        <!--final Score  -->
+        <section class="score flex justify-center text-center items-center min-h-screen hidden">
             <div class="space-y-6 flex flex-col justify-center items-center bg-[#FFFFFF33] px-7 rounded-xl py-7">
                 <h1 class="text-6xl text-white">
                     <span class="font-extrabold">Score :</span>
@@ -112,6 +113,8 @@
             </div>
         </section>
     </main>
+    <script src="script/utility.js"></script>
+    <script src="script/alpha.js"></script>
 
 </body>
 
