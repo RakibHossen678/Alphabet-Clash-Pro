@@ -18,6 +18,18 @@ function removeBgColor(elementId){
     element.classList.remove('bg-orange-600')
 }
 
+function getTextElementValueById(elementId){
+    const element = document.getElementById(elementId)
+    const elementValue=parseInt(element.innerText);
+    return elementValue
+
+}
+function setTextElementValueById(elementId , value){
+    const element = document.getElementById(elementId)
+    element.innerText=value;
+
+}
+
 function getARandomAlphabet(){
     const alphabetString = 'abcdefghijklmnopqrstuvuxyz'
     const alphabets=alphabetString.split('')
@@ -32,3 +44,5 @@ function getARandomAlphabet(){
     return Alphabet
     
 }
+
+

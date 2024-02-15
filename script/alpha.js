@@ -13,15 +13,23 @@ document.addEventListener('keyup',function handleKeyboardButtonPreess(event){
 
     const currentAlphabet=document.getElementById('current-alphabet')
     const radomAlphabet=(currentAlphabet.innerText).toLowerCase();
-    console.log(playerPressed , radomAlphabet);
+    // console.log(playerPressed , radomAlphabet);
 
     if(playerPressed === radomAlphabet){
         console.log('You get a point');
         //update score
-        const currentScoreElement = document.getElementById('current-score');
-        const currentScore=parseInt(currentScoreElement.innerText);
-        const newScore = currentScore + 1
-        currentScoreElement.innerText=newScore;
+        const currentScore=getTextElementValueById('current-score')
+        // console.log(currentScore);
+        
+        const updatedScore=currentScore + 1 ;
+        setTextElementValueById('current-score',updatedScore)
+
+
+
+        // const currentScoreElement = document.getElementById('current-score');
+        // const currentScore=parseInt(currentScoreElement.innerText);
+        // const newScore = currentScore + 1
+        // currentScoreElement.innerText=newScore;
 
 
 
@@ -31,14 +39,22 @@ document.addEventListener('keyup',function handleKeyboardButtonPreess(event){
     }
     else{
         console.log('you miss .You lost a life');
-        const currentLifeElement=document.getElementById('current-life');
-        const currentLife=parseInt(currentLifeElement.innerText);
 
-        const newLife=currentLife-1
+        const currentlife=getTextElementValueById('current-life')
+        // console.log(currentScore);
+        
+        const updatedlife=currentlife - 1 ;
+        setTextElementValueById('current-life',updatedlife)
 
-        currentLifeElement.innerText=newLife;
 
-        if(newLife===0){
+        // const currentLifeElement=document.getElementById('current-life');
+        // const currentLife=parseInt(currentLifeElement.innerText);
+
+        // const newLife=currentLife-1
+
+        // currentLifeElement.innerText=newLife;
+
+        if(updatedlife===0){
             gameOver()
             
         }
@@ -61,17 +77,20 @@ function play(){
     hideElementById('final-score')
 
     showElementById('play-ground')
+    //reset scre and life
+    setTextElementValueById('current-life',5)
+    setTextElementValueById('current-score',0)
 
-    const currentLifeElement=document.getElementById('current-life');
-        const currentLife=parseInt(currentLifeElement.innerText);
-        
-
-        currentLifeElement.innerText=currentLife;
+    
     continueGame('')
 }
 function gameOver(){
     hideElementById('play-ground')
     showElementById('final-score');
+
+    const lastScore=getTextElementValueById('current-score')
+    // console.log(lastScore);
+    setTextElementValueById('game_score',lastScore)
 
 
 }
