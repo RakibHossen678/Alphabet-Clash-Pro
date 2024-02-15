@@ -8,6 +8,11 @@
 
 document.addEventListener('keyup',function handleKeyboardButtonPreess(event){
     const playerPressed =(event.key)
+    console.log(playerPressed);
+
+    if(playerPressed==='Escape'){
+        gameOver()
+    }
     
     
 
@@ -91,6 +96,10 @@ function gameOver(){
     const lastScore=getTextElementValueById('current-score')
     // console.log(lastScore);
     setTextElementValueById('game_score',lastScore)
+
+    const currentAlphabet=getElementTextById('current-alphabet');
+    console.log(currentAlphabet);
+    removeBgColor(currentAlphabet)
 
 
 }
