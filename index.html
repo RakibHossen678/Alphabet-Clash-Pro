@@ -44,44 +44,44 @@
         <section id="play-ground" class=" min-h-screen flex flex-col justify-center items-center hidden">
           <div class="">
                 <div class="artboard artboard-horizontal phone-6 border-[14px] bg-[#FFFFFFB3] mx-auto w-auto  rounded-xl border-[#2F2941cc] ">
-                    <div class="bg-[#2F2941cc] w-96 mx-auto text-center rounded-b-xl text-white font-medium py-2 ">
+                    <div class="bg-[#2F2941cc] w-96  mx-auto text-center rounded-b-xl text-white font-medium py-2 ">
                         <p>Don't watch keyboard  while playing...</p>
                     </div>
                     <p id="current-alphabet" class="text-8xl flex justify-center items-center h-full uppercase">Y</p>
                 </div>
                 <div class="mt-6  ">
-                    <div class="flex justify-center gap-1 w-full  ">
-                        <kbd class="kbd hover:bg-[#FFA500]">q</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">w</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">e</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">r</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">t</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">y</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">u</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">i</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">o</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">p</kbd>
+                    <div class="flex justify-center gap-[2px] lg:gap-1 w-full  ">
+                        <kbd id="q" class="kbd hover:bg-[#FFA500]">q</kbd>
+                        <kbd id="w" class="kbd hover:bg-[#FFA500]">w</kbd>
+                        <kbd id="e" class="kbd hover:bg-[#FFA500]">e</kbd>
+                        <kbd id="r" class="kbd hover:bg-[#FFA500]">r</kbd>
+                        <kbd id="t" class="kbd hover:bg-[#FFA500]">t</kbd>
+                        <kbd id="y" class="kbd hover:bg-[#FFA500]">y</kbd>
+                        <kbd id="u" class="kbd hover:bg-[#FFA500]">u</kbd>
+                        <kbd id="i" class="kbd hover:bg-[#FFA500]">i</kbd>
+                        <kbd id="o" class="kbd hover:bg-[#FFA500]">o</kbd>
+                        <kbd id="p" class="kbd hover:bg-[#FFA500]">p</kbd>
                       </div> 
                       <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd hover:bg-[#FFA500]">a</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">s</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">d</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">f</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">g</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">h</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">j</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">k</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">l</kbd>
+                        <kbd id="a" class="kbd hover:bg-[#FFA500]">a</kbd>
+                        <kbd id="s" class="kbd hover:bg-[#FFA500]">s</kbd>
+                        <kbd id="d" class="kbd hover:bg-[#FFA500]">d</kbd>
+                        <kbd id="f" class="kbd hover:bg-[#FFA500]">f</kbd>
+                        <kbd id="g" class="kbd hover:bg-[#FFA500]">g</kbd>
+                        <kbd id="h" class="kbd hover:bg-[#FFA500]">h</kbd>
+                        <kbd id="j" class="kbd hover:bg-[#FFA500]">j</kbd>
+                        <kbd id="k" class="kbd hover:bg-[#FFA500]">k</kbd>
+                        <kbd id="l" class="kbd hover:bg-[#FFA500]">l</kbd>
                       </div> 
                       <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd hover:bg-[#FFA500]">z</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">x</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">c</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">v</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">b</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">n</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">m</kbd>
-                        <kbd class="kbd hover:bg-[#FFA500]">/</kbd>
+                        <kbd id="z" class="kbd hover:bg-[#FFA500]">z</kbd>
+                        <kbd id="x" class="kbd hover:bg-[#FFA500]">x</kbd>
+                        <kbd id="c" class="kbd hover:bg-[#FFA500]">c</kbd>
+                        <kbd id="v" class="kbd hover:bg-[#FFA500]">v</kbd>
+                        <kbd id="b" class="kbd hover:bg-[#FFA500]">b</kbd>
+                        <kbd id="n" class="kbd hover:bg-[#FFA500]">n</kbd>
+                        <kbd id="m" class="kbd hover:bg-[#FFA500]">m</kbd>
+                        <kbd id="/" class="kbd hover:bg-[#FFA500]">/</kbd>
                       </div>
                 </div>
             </div >
@@ -89,12 +89,12 @@
                 <button class="btn text-lg rounded-full hover:bg-[#894189] border-none text-white bg-[#894189]">
                     Life
                     <img src="assests/images/heart.png" alt="">
-                    <span>1</span>
+                    <span id="current-life">5</span>
                   </button>
                 <button class="btn text-lg hover:bg-[#360490] border-none rounded-full text-white bg-[#360490]">
                     Score
                     <img src="assests/images/poisa.png" alt="">
-                    <span>1</span>
+                    <span id="current-score">0</span>
 
                     
                   </button>
@@ -102,13 +102,13 @@
         </section>
 
         <!--final Score  -->
-        <section class="score flex justify-center text-center items-center min-h-screen hidden">
+        <section id="final-score" class="score flex justify-center text-center items-center min-h-screen hidden">
             <div class="space-y-6 flex flex-col justify-center items-center bg-[#FFFFFF33] px-7 rounded-xl py-7">
                 <h1 class="text-6xl text-white">
                     <span class="font-extrabold">Score :</span>
-                    <span>14</span> 
+                    <span id="current-score">0</span> 
                 </h1>
-                <button class="bg-white  font-semibold px-4 py-3 rounded-xl text-lg">Play again</button>
+                <button onclick="play()" class="bg-white  font-semibold px-4 py-3 rounded-xl text-lg">Play again</button>
                 <p class="text-white text-lg ">Practice will make you Pro</p>
             </div>
         </section>
